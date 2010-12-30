@@ -106,7 +106,7 @@ Puppet::Type.type(:sudoers).provide(
   def self.parse_defaults(default, parameters, hash)
     hash[:name] = default
     hash[:type] = 'default'
-    hash[:parameters] = parameters.gsub(/\s/, '').split(',')
+    hash[:parameters] = parameters.split(',')
   end
   
   # can I override this?
